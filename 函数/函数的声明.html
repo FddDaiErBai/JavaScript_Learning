@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /*
+        * 第一种语法格式
+        * function 函数名（参数列表）{js代码}
+        *
+        * 第二种语法
+        * let 函数名=function（参数列表）{js代码}
+        *
+        * 第三种语法
+        * let 函数名=new Function（"js代码"）
+        *
+        *  */
+
+        function func1() {
+            alert("Hello!");
+        }
+
+        let func2 = function () {
+            alert("Hi!");
+        }
+
+        let func3 = new Function('alert("Good!");');
+
+        // 调用方法
+        func1();
+        func2();
+        func3();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

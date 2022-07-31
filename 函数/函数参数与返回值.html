@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /*
+        * 传入的实参可以和形参个数不一致
+        *  */
+
+        function func1(a, b, c) {
+            alert("a:" + a);
+            alert("b:" + b);
+            alert("c:" + c);
+        }
+
+        func1(10, "b", false);
+        //少传参数
+        func1(1, 2);
+        //多穿参数，多传的参数相当于没传
+        func1(1, 2, 3, 4);
+
+        function func2(a, b) {
+            return a * b;
+        }
+
+        let x = func2(100, 200);
+        alert(x);
+
+        //方法本身作为参数
+        function func3(i, j) {
+            return i + j;
+        }
+
+        function func4(a) {
+            let sum = a(10, 20);
+            alert(sum);
+        }
+
+        func4(func3);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
