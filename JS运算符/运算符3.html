@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+      /*
+      * == 等值符
+      * 先比较类型，如果类型一致，比较值是否相同
+      * 如果类型不一致，会将数据类型转成number 再比较内容
+      *  */
+
+      let a =1;
+      let b ="1";
+      let c =true;
+      let d ="true";
+
+      alert(a==b); //t
+      alert(a==c); //t
+      alert(a==d); //f
+      alert(c==b); //t
+      alert(d==b); //f
+      alert(c==d); //f
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
