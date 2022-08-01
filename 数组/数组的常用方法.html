@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let index = arr.indexOf(7);
+        console.log(index);
+
+        //合并两个数组
+        let hege = ["Cecilie", "Lone"];
+        let stale = ["Emil", "Tobias", "Linus"];
+        let children = hege.concat(stale);
+        console.log(children);
+
+        //合并三个数组
+        let parents = ["Jani", "Tove"];
+        let brothers = ["Stale", "Kai Jim"];
+        let children2 = ["Cecilie", "Lone"];
+        let family = parents.concat(brothers, children2);
+        console.log(family);
+
+        //合并字符串
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fs = fruits.join();
+        console.log(fs);
+
+
+        //移除最后一个元素
+        let fruit = fruits.pop();
+        console.log(fruits);
+        console.log(fruit);
+
+        //向结尾增加元素
+        fruits.push("Grape");
+        console.log(fruits);
+
+        //反转数组
+        fruits.reverse();
+        console.log(fruits);
+
+        //删除数组第一个元素
+        let s = fruits.shift();
+        console.log(fruits);
+        console.log(s);
+
+        //向第一个位置添加元素
+        fruits.unshift("火龙果");
+        console.log(fruits);
+
+        //切片 [a,b)
+        let citrus = fruits.slice(1, 3);
+        console.log(citrus);
+
+        //删除数组中的某些元素 splice(a,b) 从a索引开始，删除b个 如果第二个参数是0，就变成了在指定索引位置添加元素
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        numbers.splice(2, 3);
+        console.log(numbers);
+
+        numbers.splice(2, 0, 100);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
