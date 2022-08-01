@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        function func1() {
+            console.log("双击")
+        }
+
+        function func2() {
+            console.log("鼠标按下")
+        }
+
+        function func3() {
+            console.log("鼠标抬起")
+        }
+
+        function func4() {
+            console.log("鼠标进入")
+        }
+
+        function func5() {
+            console.log("鼠标离开")
+        }
+
+        function func6() {
+            console.log("鼠标移动")
+        }
+    </script>
+</head>
+<body>
+<div class="d1" ondblclick="func1()" onmousedown="func2()" onmouseup="func3()" onmouseenter="func4()"
+     onmouseleave="func5()" onmousemove="func6()"></div>
+</body>
+</html>

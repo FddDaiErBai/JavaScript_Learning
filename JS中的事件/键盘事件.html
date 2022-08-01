@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+            console.log("按钮按下")
+        }
+
+        function func2() {
+            console.log("按钮抬起")
+        }
+    </script>
+</head>
+<body>
+<label>
+    <input type="text" onkeydown="func1()" onkeyup="func2()">
+</label>
+</body>
+</html>

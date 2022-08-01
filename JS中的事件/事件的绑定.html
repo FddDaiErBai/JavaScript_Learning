@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+            console.log("func1执行了")
+        }
+
+        function func2() {
+            console.log("func2执行了")
+        }
+
+        function func3() {
+            console.log("func3执行了")
+        }
+    </script>
+</head>
+<body>
+<!--
+  JS事件驱动类型
+  当我们单击按钮时，触发某些JS代码的执行
+  单击按钮时，触发一段JS代码运行
+  一个事件可以绑定多个JS函数
+  一个页面元素可以同时绑定多个事件
+ -->
+<input type="button" value="按钮" onclick="func1();func2()" onmouseover="func3()">
+</body>
+</html>

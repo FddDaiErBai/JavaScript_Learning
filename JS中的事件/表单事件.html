@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function func1() {
+        console.log("获得焦点");
+    }
+
+    function func2() {
+        console.log("失去焦点");
+    }
+
+    function func3() {
+        console.log("正在输入");//只要输入就会触发
+    }
+
+    function func4() {
+        console.log("内容改变");//内容信息发生改变，同时失去焦点
+    }
+
+    function func5(sel) {
+        console.log("内容改变" + sel.value);
+    }
+
+    function func6() {
+        alert("发生了提交事件");
+        //做了一些运算之后 动态决定表单能否提交
+        return true;
+    }
+
+    function func7() {
+        console.log("发生了重置事件");
+    }
+</script>
+<body>
+<form method="get" action="https://www.baidu.com" onsubmit="func6()" onreset="func7()">
+    <label>
+        <input name="" value="" type="text" onfocus="func1()" onblur="func2()" oninput="func3()" onchange="func4()"><br>
+
+        <select name="城市" onchange="func5(this)">
+            <option selected="selected">请选择你的城市</option>
+            <option value="1">北京</option>
+            <option value="2">天津</option>
+            <option value="3">上海</option>
+            <option value="4">重庆</option>
+        </select>
+        <br>
+        <input type="submit" value="提交数据">
+        <input type="reset" value="重置数据">
+    </label>
+</form>
+</body>
+</html>
