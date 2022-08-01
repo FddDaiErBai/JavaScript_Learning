@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //根据索引获取字符
+        let str = "Hello,js";
+        console.log(str.charAt(7));
+
+        //拼接字符串
+        let a = "Hi";
+        let b = "js";
+        let c = "China";
+        console.log(c.concat(a, b));
+
+        //复制字符串
+        let e = "asdf";
+        let s = e.repeat(2);
+        console.log(s);
+
+        //截取字符串 substring(a,b) 截取[a,b)
+        let g = "Hello,John";
+        let r = g.substring(1, 5);
+        console.log(r);
+
+        //获取长度
+        console.log(g.length); // length属性
+
+        //JS中非常特殊的函数，可以将一段字符串当作JS代码来执行
+        //将字符串代码解析成JS代码来运行
+        let testStr = "let x = 10";
+        eval(testStr);
+        console.log(x);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

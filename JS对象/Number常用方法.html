@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+
+        console.log(Number.parseFloat("10.123") + 20);
+        console.log(Number.parseInt("10") + 10);
+
+        let i = 10 % 0;
+        let j = 10 / 0;
+        console.log(i);
+        console.log(j);
+
+        console.log(Number.isFinite(j));
+        console.log(Number.isNaN(i));
+
+        console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER));
+        console.log(Number.isSafeInteger(Number.MAX_VALUE));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

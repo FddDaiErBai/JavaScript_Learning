@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        let today = new Date();
+        let d1 = new Date("October 13, 1975 11:13:00");
+        let d2 = new Date(79, 5, 24); //默认1979
+        let d3 = new Date(79, 5, 24, 11, 33, 0);
+        console.log(today);
+        console.log(d1);
+        console.log(d2);
+        console.log(d3);
+
+        let d4 = new Date(2048, 0, 13, 16, 51, 20);
+        console.log(d4);
+
+        console.log(d4.getFullYear());
+        console.log(d4.getDate());
+        console.log(d4.getMonth());
+        console.log(d4.getHours());
+        console.log(d4.getMinutes());
+        console.log(d4.getSeconds());
+        console.log(d4.getMilliseconds());
+
+        let d5 = new Date(2048, 0, 13, 16, 51, 20, 456);
+
+        console.log(d4 < d5);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

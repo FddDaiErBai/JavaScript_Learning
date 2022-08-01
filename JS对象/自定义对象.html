@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 实例化对象 let obj = new Object(); 简化 let obj = {};
+        let obj = {};
+        // 给对象添加属性和方法
+        obj.name = "张哥";
+        obj.age = "16";
+        obj.gender = "男";
+
+        obj.eat = function (food) {
+            console.log(this.name + "正在吃" + food);
+        }
+
+        //查看对象属性
+        console.log(obj.name);
+
+        //调用对象方法
+        obj.eat("fish");
+
+
+    </script>
+    <script>
+
+        //准备一个构造方法
+        function Person(pname, page) {
+            this.pname = pname;
+            this.page = page;
+
+            this.eat = function (food) {
+                console.log(this.page + "岁的" + this.pname + "正在吃" + food);
+            }
+        }
+
+        let p1 = new Person("张三", 16);
+
+        //查看对象属性
+        console.log(p1.pname);
+        console.log(p1.page);
+
+        //调用对象方法
+        p1.eat("cake");
+
+
+    </script>
+    <script>
+
+        /*
+        * JSON
+        * let 对象名={属性名：属性值，属性名：属性值，......，方法名：方法声明......}
+        *  */
+
+        let person = {
+            name: "李四",
+            age: 10,
+            gender: "男",
+            eat: function (food) {
+                console.log(this.age + "岁的" + this.gender + "孩儿" + this.name + "正在吃" + food);
+            }
+        }
+
+        //查看对象属性
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.gender);
+
+        //调用对象方法
+        person.eat("apple");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
