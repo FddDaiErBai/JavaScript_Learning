@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+
+        }
+
+        .a {
+            background-color: lightblue;
+            color: blue;
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        function func1() {
+            //节点.style.样式名=样式值
+            let element = document.getElementById("div1");
+            element.style.width = "200px";
+            element.style.height = "200px";
+            element.style.border = "10px solid green";
+            //css样式在更多的时候以class选择器的形式作用到元素上
+            //可以通过修饰class属性，影响div的属性
+
+            element.setAttribute("class", "a");
+        }
+    </script>
+</head>
+<body>
+<div id="div1">你好呀</div>
+<hr/>
+<input type="button" value="测试" onclick="func1()"/>
+</body>
+</html>

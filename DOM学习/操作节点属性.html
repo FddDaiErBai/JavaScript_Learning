@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+
+            let element = document.getElementById("in1");
+
+            //语法1 获取节点.属性名 修改节点.属性名=属性值
+            // console.log(element.type);
+            // console.log(element.value);
+            //
+            // element.type = "button";
+            // element.value="你也好";
+
+            //语法2 getAttribute setAttribute setAttribute
+            console.log(element.getAttribute("type"));
+            console.log(element.getAttribute("value"));
+
+            element.setAttribute("type", "button");
+            element.setAttribute("value", "你也好");
+
+        }
+    </script>
+</head>
+<body>
+<label>
+    <input type="text" value="你好啊" id="in1">
+</label>
+<hr>
+<label>
+    <input type="button" value="变" onclick="func1()">
+</label>
+</body>
+</html>
