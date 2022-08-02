@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+            history.forward();
+        }
+
+        function func2() {
+            history.back();
+
+        }
+
+        function func3() {
+            history.go();//正整数 向前跳转 负整数向后跳转
+        }
+
+    </script>
+</head>
+<body>
+<a href="https://www.jd.com">京东</a>
+<input type="button" value="向前" onclick="func1()">
+<input type="button" value="向后" onclick="func2()">
+<input type="button" value="go" onclick="func3()">
+</body>
+</html>

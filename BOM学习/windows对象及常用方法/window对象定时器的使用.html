@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        let IntervalIDs = [];
+
+        //生成一个时间，向控制台打印
+        function startInterval() {
+
+            let IntervalID = window.setInterval(
+                function () {
+                    let today = new Date();
+                    let hours = today.getHours();
+                    let minutes = today.getMinutes();
+                    let seconds = today.getSeconds();
+                    let str = hours + ":" + minutes + ":" + seconds;
+                    let ta = document.getElementById("timeArea");
+                    ta.value = str;
+                },
+                1000
+            );
+            IntervalIDs.push(IntervalID);
+
+
+        }
+
+        function stopInterval() {
+            while (IntervalIDs.length > 0) {
+                window.clearInterval(IntervalIDs.shift());
+            }
+
+        }
+
+        //执行一次定时器任务
+
+        let TimeOutIDs = [];
+
+        function startTimeout() {
+            let timeoutID = window.setTimeout(
+                function () {
+                    let today = new Date();
+                    let hours = today.getHours();
+                    let minutes = today.getMinutes();
+                    let seconds = today.getSeconds();
+                    let str = hours + ":" + minutes + ":" + seconds;
+                    console.log(str);
+                },
+                5000
+            );
+
+            TimeOutIDs.push(timeoutID);
+        }
+
+        function stopTimeout() {
+            while (TimeOutIDs.length > 0) {
+                window.clearInterval(TimeOutIDs.shift());
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="text" id="timeArea">
+<input type="button" value="开始Interval" onclick="startInterval()">
+<input type="button" value="结束Interval" onclick="stopInterval()">
+<input type="button" value="开始timeout" onclick="startTimeout()">
+<input type="button" value="结束timeout" onclick="stopTimeout()">
+
+</body>
+</html>

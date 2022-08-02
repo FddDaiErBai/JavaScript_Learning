@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /*
+        * 如果是使用window对象调用的方法和访问的属性，window可以省略不写
+        *  */
+        function func1() {
+
+            window.alert("你好");// 普通信息提示框
+            //如何知道选择
+            let cons = window.confirm("确定要删除吗？");// 确认框
+            console.log(cons);
+
+            let mess = window.prompt("请输入密码", "例如：123");//信息输入框
+            console.log(mess);
+
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="测试按钮" onclick="func1()">
+</body>
+</html>
