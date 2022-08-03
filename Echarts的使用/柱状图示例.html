@@ -1,0 +1,61 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=dataset-simple0&code=PYBwLglsB2AEC8sDeAoWsA2BTA5l6AJgFzIC-ANGrGMMBpCCUhVQQIZhsDOWYTV6LsACuAJwDGWEgG0B6WNIDkIUcALDxYReViKATAAYAjAFZtuw0YBs5_cYDsigLqV58pQFkO4gBZtYADIcYFjmACwAzAB0EToAHCZRcToAnNH2LnLonhAYANawACpYbOZx0UY69tFhOiaJRplu2YoAwj5YWDywrcDiwKXxVlG1sFaJevF6USZNzUoA6mwY0MJgsABCqgDu0BChVdOjJtEpOhEpUY1yTlQs6AAeAIIPEFxM1ACeIFK64hy4YCiT6KWD3WCfF5vJjggD0sNgABEsOIMGxRFhYDwAG5YUTLWAAI3RWLx-y4OhKvlg21yGCJmIAtmwQD8CFR4dRgLB_P0MMJGXBgAAzWDsTg8MBRIRiSREz5irDCtjCehRKg8UTkmRIL4_EiKYmiUEUZB636G9EmnS6sDfC1Gk23UgAbiAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <title>柱状图示例</title>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <script type="text/javascript">
+
+        function showData() {
+            let dom = document.getElementById('container');
+            let myChart = echarts.init(dom, null, {
+                renderer: 'canvas',
+                useDirtyRect: false
+            });
+            let app = {};
+
+            let option;
+
+            option = {
+                legend: {},
+                tooltip: {},
+                dataset: {
+                    source: [
+                        ['product', '2015', '2016', '2017', "2018"],
+                        ['Matcha Latte', 43.3, 85.8, 93.7, 81.3],
+                        ['Milk Tea', 83.1, 73.4, 55.1, 66.5],
+                        ['Cheese Cocoa', 86.4, 65.2, 82.5, 90.4],
+                        ['Walnut Brownie', 72.4, 53.9, 39.1, 83.7],
+                        ['cappuccino', 60.5, 73.9, 49.1, 53.7]
+                    ]
+                },
+                xAxis: {type: 'category'},
+                yAxis: {},
+                // Declare several bar series, each will be mapped
+                // to a column of dataset.source by default.
+                series: [{type: 'bar'}, {type: 'bar'}, {type: 'bar'}, {type: 'bar'}]
+            };
+
+
+            if (option && typeof option === 'object') {
+                myChart.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart.resize);
+        }
+
+
+    </script>
+</head>
+<body style="height: 100%; margin: 0">
+
+<div id="container" style="height: 100%">
+    <input type="button" value="显示数据" onclick="showData()">
+</div>
+
+</body>
+</html>
